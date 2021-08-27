@@ -1,8 +1,7 @@
 FROM debian:jessie
 
 RUN apt-get update --fix-missing \
-    && apt-get install -q -y nagios-nrpe-server nagios-plugins curl \
-    && apt-get install -q -y docker.io bc \
+    && apt-get install -q -y nagios-nrpe-server nagios-plugins curl bc \
     && apt-get clean \
     && rm -rf /var/lib/apt /tmp/* /var/tmp/*
 
